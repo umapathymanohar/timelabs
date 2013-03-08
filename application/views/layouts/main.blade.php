@@ -12,20 +12,37 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="home">TimeSheet</a>
-  
+                @section('post_navigation')
+                    @if (Auth::check())
+                        @include('plugins.loggedin_postnav')
+                    @endif
+                    @yield_section
                 </div>
             </div>
         </div>
 
-        <div class="container">
+        <div  style="padding-top:60px"  class="container">
             @include('plugins.status')
             @yield('content')
-            <hr>
-            <footer>
-            <p>&copy; Icelabs 2012</p>    
-            </footer>
+ 
         </div> <!-- /container -->
  
         @yield_section
+
+
+            <footer>
+
+            <div class="container">
+                <p>&copy; Icelabs 2012</p>    
+            </div>
+
+            </footer>
     </body>
 </html>
+
+
+<script>
+    $(function(){
+    $('#retroclockbox1').xdretroclock();
+})
+</script>

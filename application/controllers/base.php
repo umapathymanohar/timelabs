@@ -8,6 +8,9 @@ class Base_Controller extends Controller {
         Asset::add('jquery', 'js/jquery-min.js');
         Asset::add('bootstrap-js', 'js/bootstrap.min.js');
         Asset::add('bootstrap-css', 'css/bootstrap.min.css');
+        Asset::add('xdretroclock-js', 'js/jquery.xdretroclock.js');
+        Asset::add('xdretroclock-css', 'css/jquery.xdretroclock.css');
+        
         Asset::add('bootstrap-css-responsive', 'css/bootstrap-responsive.min.css', 'bootstrap-css');
         Asset::add('style', 'css/style.css');
         parent::__construct();
